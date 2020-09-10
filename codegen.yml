@@ -1,0 +1,12 @@
+overwrite: true
+schema: "https://countries.trevorblades.com"
+documents: "src/**/*.graphql"
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-document-nodes"
+      - typescript-vue-apollo
+    config:
+      withCompositionFunctions: true
